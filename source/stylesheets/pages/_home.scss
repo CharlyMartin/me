@@ -1,109 +1,84 @@
-// .background {
-//   top: 0px;
-//   left: 0px;
-//   background-color: #B5F2C3;
-// }
-
-// .box-shadow {
-//   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-// }
-
-// .header {
-//   background-color: $header-color;
-//   height: 5px;
-//   display: flex;
-// }
-
-// .header-fixed {
-//   position: fixed;
-//   left: 0px;
-//   top: 0px;
-//   z-index: 1;
-//   width: 100%;
-// }
-
-// .header-items {
-
-// }
-
-
 .wrapper-name {
   background-color: #F1F2F2;
 }
 
-  .name {
-    margin-top: 40px;
-    padding: 10px;
-    font-family: $header-font;
-    font-size: 40px;
-    font-weight: bold;
-    color: $header-color;
-    letter-spacing: 4px;
-  }
+.name {
+  margin-top: 40px;
+  padding: 10px;
+  font-family: $header-font;
+  font-size: 40px;
+  font-weight: bold;
+  color: $header-color;
+  letter-spacing: 4px;
+}
 
-  .tagline {
-    margin-bottom: 40px;
-    padding: 10px;
-    font-family: $base-font;
-    color: $gray-light;
-    font-weight: light;
-    font-size: $base-size;
-  }
+.tagline {
+  margin-bottom: 40px;
+  padding: 10px;
+  font-family: $base-font;
+  color: $gray-light;
+  font-weight: light;
+  font-size: $base-size;
+}
 
 .wrapper-description {
   background-color: white;
 }
 
-  .description {
-    margin: 40px auto;
-    font-family: $base-font;
-    color: $gray-light;
-    font-weight: light;
-    font-size: $base-size;
-    line-height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    div {
-      margin: 5px 0px;
-    }
+.description {
+  margin: 40px auto;
+  font-family: $base-font;
+  color: $gray-light;
+  font-weight: light;
+  font-size: $base-size;
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  div {
+    margin: 5px 0px;
   }
+}
 
-  .social-links {
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.social-links {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cta-email {
+  width: 100%;
+  background: red;
+}
+
+#linkedin {
+  color: $icon-color;
+  &:hover {
+    color: #1B85BD;
   }
+}
 
-
-  #linkedin {
-    color: $icon-color;
-    &:hover {
-      color: #1B85BD;
-    }
+  #twitter {
+  color: $icon-color;
+  &:hover {
+    color: #1DA1F2;
   }
+}
 
-    #twitter {
-    color: $icon-color;
-    &:hover {
-      color: #1DA1F2;
-    }
+  #github {
+  color: $icon-color;
+  &:hover {
+    color: #0D2636;
   }
+}
 
-    #github {
-    color: $icon-color;
-    &:hover {
-      color: #0D2636;
-    }
+  #envelope {
+  color: $icon-color;
+  &:hover {
+    color: #EA5B0C;
   }
-
-    #envelope {
-    color: $icon-color;
-    &:hover {
-      color: #EA5B0C;
-    }
-  }
+}
 
 
 .wrapper-social {
