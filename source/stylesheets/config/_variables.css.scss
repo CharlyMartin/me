@@ -1,7 +1,7 @@
 // FONT FAMILY
-@import url("https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway");
-$base-font: "Raleway", "Helvetica", "sans-serif";
-$header-font: "Montserrat", "Helvetica", "sans-serif";
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Raleway");
+$base-font: 'Raleway', "sans-serif";
+$header-font: 'Montserrat', "sans-serif";
 
 // FONT COLORS
 $base-color: black;
@@ -25,8 +25,5 @@ $yellow: #FDB631;
 $orange: #E67E22;
 $green: #32B796;
 
-// SIZES
-$wrapper-height: 200px;
-
 // ICONS
-$icon-color: lighten(#000, 85%);;
+$icon-color: lighten(#000, 70%);;
