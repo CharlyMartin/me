@@ -82,6 +82,7 @@ a {
   padding: 5px;
   font-family: $header-font;
   font-size: 14px;
+  border-top: solid 2px white;
 }
 
 #linkedin {
@@ -108,7 +109,7 @@ a {
 ////////////////////////////////////////////////////////////////////////////////
 .wrapper-website {
   padding: 50px 0;
-  border-bottom: solid 2px white;
+  border-top: solid 2px white;
 }
 
 .logo-container {
@@ -143,12 +144,10 @@ a {
 }
 
 #hubsy {
-  background: RGBA(246, 239, 224, 0.8);
+  background: RGBA(221, 186, 128, 0.3);
   transition: all 0.2s ease;
   &:hover {
-    background: RGBA(246, 239, 224, 1);
-    // margin: 10px 0;
-    // padding: 40px 0;
+    background: RGBA(221, 186, 128, 0.45);
   }
 }
 
