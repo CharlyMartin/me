@@ -1,9 +1,18 @@
 <!doctype html>
 <html>
+<!--
+CODED WITH LOVE BY
+CHARLY MARTIN: https://charlymartin.github.io/me/
+-->
   <head>
-      <!--
-    CODED WITH LOVE BY CHARLY MARTIN
-    -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5FGGNR5');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="utf-8">
 
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
@@ -15,14 +24,25 @@
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title> Charly MARTIN </title>
+    <meta name="description" content="Charly MARTIN's portfolio. Fullstack Web Developer // UI Designer. Have a cool project? Let's work together. Drop me an email!">
+
+    <!-- Open Graph -->
+    <meta property="og:url"           content="https://charlymartin.github.io/me/" />
+    <meta property="og:title"         content="Charly MARTIN's portfolio." />
+    <meta property="og:description"        content="I'm a fullstack web developer & UI designer. Have a cool project? Let's work together. Drop me an email!" />
+    <meta property="og:image"              content="https://www.facebook.com/photo.php?fbid=10210657910383697&set=a.1622170633923.83390.1226161041&type=3&theater" />
 
     <%= stylesheet_link_tag "all" %>
     <%= javascript_include_tag  "all" %>
   </head>
 
   <body class="<%= page_classes %>">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FGGNR5"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <%= yield %>
-
   </body>
+
 </html>
