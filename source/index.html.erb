@@ -1,38 +1,43 @@
 <!-- NAVBAR JS -->
 
 <div class="mynavbar">
+
   <div class="navbar-container">
-    <%= image_tag 'avatar.png', class: 'navbar-image' %>
-    <span class="navbar-name">CHARLY MARTIN</span>
+    <%= image_tag data.charly.photo, class: 'navbar-image' %>
+    <span class="navbar-name"> <%= data.charly.name %> </span>
   </div>
+
   <div class="navbar-container">
-LOL
+    <a href="mailto:<%= data.charly.email %>?subject=<%= data.charly.email_subject %>">
+      <div class=cta-email-navbar>
+        <i class="fa fa-envelope" aria-hidden="true" style="margin-right: 5px;"></i>
+        <span> Email</span>
+      </div>
+    </a>
   </div>
 
 </div>
 
 <!-- HEADER -->
-
-<div class="headline-container">
-  <div class="container text-center">
-
+  <div class="container-fluid no-padding">
     <div class="row">
       <div class="col-xs-12">
+        <div class="headline-container">
 
-        <%= image_tag 'avatar.png', class: 'main-image' %>
-        <h1 class="name"> CHARLY MARTIN </h1>
-        <h2 class="tagline"> Rails developer  /  Fullstack  /  UI designer  /  SEO Expert </h2>
+        <%= image_tag data.charly.photo, class: 'main-image' %>
+        <h1 class="name"> <%= data.charly.name %> </h1>
+        <h2 class="tagline"> <%= data.charly.tagline %> </h2> -->
 
-        <div class="cta-container">
-          <a href="mailto:charly.martin.1207@gmail.com?subject=Hello Charly!">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-            <span class=cta-email>email</span>
-          </a>
-        </div>
+        <a href="mailto:<%= data.charly.email %>?subject=<%= data.charly.email_subject %>">
+          <div class=cta-email>
+            <i class="fa fa-envelope" aria-hidden="true" style="margin-right: 5px;"></i>
+            <span> Email</span>
+          </div>
+        </a>
+
 
       </div>
     </div>
-
   </div>
 </div>
 
@@ -43,7 +48,7 @@ LOL
     <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
       <div class="part" id="#about-me">
         <%= partial(:header, :locals => {:title => "ABOUT ME"}) %>
-        <p class="part-content"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, eveniet enim voluptatem veritatis, esse totam perferendis. Ut eaque doloremque velit sit excepturi distinctio impedit ea ipsa id laborum. Earum, error? </p>
+        <p class="part-content"> <%= data.charly.bio %> </p>
       </div>
     </div>
   </div>
@@ -53,18 +58,18 @@ LOL
       <div class="part-content">
         <%= partial(:header, :locals => {:title => "SKILLS"}) %>
         <div class="list">
-          <span class="key">LANGUAGES:</span>
-          <span class="attributes">Ruby, HTML, CSS, JavaScript</span>
+          <span class="key"> <%= data.charly.skills.language.name %> </span>
+          <span class="attributes"> <%= data.charly.skills.language.list %> </span>
         </div>
 
         <div class="list">
-          <span class="key">FRAMEWORK & LIBRARIES:</span>
-          <span class="attributes">Rails, JQuery, Bootstrap, SCSS</span>
+          <span class="key"> <%= data.charly.skills.framework.name %> </span>
+          <span class="attributes"> <%= data.charly.skills.framework.list %> </span>
         </div>
 
         <div class="list">
-          <span class="key">DATABASE & ORM:</span>
-          <span class="attributes">PostgreSQL, Active Record, SQL, SQLite</span>
+          <span class="key"> <%= data.charly.skills.database.name %> </span>
+          <span class="attributes"> <%= data.charly.skills.database.list %> </span>
         </div>
 
 <!--           <div class="list">
@@ -170,3 +175,22 @@ LOL
 </div>
 
 <!-- <div class="portfolio"> THANKS! </div> -->
+
+<!-- JAVASCRIPT -->
+<script>
+  const nav = document.querySelector('.mynavbar');
+
+  function toggleActive() {
+    const scrollPosition = window.scrollY;
+    const pixelTrigger = 500;
+
+    if (scrollPosition > pixelTrigger) {
+      nav.classList.add('navbar-active')
+    }
+    else if (scrollPosition < pixelTrigger) {
+      nav.classList.remove('navbar-active')
+    };
+  };
+
+  window.addEventListener('scroll', toggleActive)
+</script>

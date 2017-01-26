@@ -1,0 +1,24 @@
+name: "CHARLY MARTIN"
+tagline: "Rails developer / Front-end designer / SEO Expert"
+photo: "avatar.png"
+favicon: "favicon.png"
+email: "charly.martin.1207@gmail.com"
+email_subject: "Hi Charly!"
+bio: |
+  orem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, eveniet enim
+  voluptatem veritatis, esse totam perferendis. Ut eaque doloremque velit sit excepturi
+  distinctio impedit ea ipsa id laborum.
+meta_description: |
+  Charly MARTIN's portfolio. Rails Developer, full-stack, UI Designer & SEO Expert.
+  Have a cool project in mind? Drop me an email!
+skills:
+  language:
+    name: "languages"
+    list: "Ruby, HTML, CSS, JavaScript"
+  framework:
+    name: "frameworks & librairies"
+    list: "Rails, JQuery, Bootstrap, SCSS"
+  database:
+    name: "database & ORM"
+    list: "PostgreSQL, Active Record, SQL, SQLite"
+
