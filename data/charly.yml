@@ -11,14 +11,17 @@ bio: |
 meta_description: |
   Charly MARTIN's portfolio. Rails Developer, full-stack, UI Designer & SEO Expert.
   Have a cool project in mind? Drop me an email!
-skills:
-  language:
-    name: "languages"
-    list: "Ruby, HTML, CSS, JavaScript"
-  framework:
-    name: "frameworks & librairies"
-    list: "Rails, JQuery, Bootstrap, SCSS"
-  database:
-    name: "database & ORM"
-    list: "PostgreSQL, Active Record, SQL, SQLite"
-
+language:
+  name: "languages"
+  list: "Ruby, HTML, CSS, JavaScript"
+framework:
+  name: "frameworks & librairies"
+  list: "Rails, JQuery, Bootstrap, SCSS"
+database:
+  name: "database & ORM"
+  list: "PostgreSQL, Active Record, SQL, SQLite"
+social:
+  linkedin: "https://www.linkedin.com/in/charlymartin"
+  github: "https://github.com/charlymartin"
+  twitter: "https://twitter.com/charlymrtn1"
+  instagram: "https://www.instagram.com/charly.mrtn/"
