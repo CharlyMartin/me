@@ -15,7 +15,7 @@
 }
 
 .navbar-active {
-  opacity: 1;
+  opacity: 0.95;
 }
 
 .navbar-image {
@@ -33,7 +33,7 @@
 }
 
 .cta-email-navbar {
-  background: rgba(234, 91, 12, 1.00);
+  background: $cta-color;
   color: white;
   padding: 5px 15px;
   font-family: $base-font;
@@ -44,6 +44,6 @@
   border-radius: 2px;
   &:hover {
     background: white;
-    color: #EA5B0C;
+    color: $cta-color;
   }
 }

@@ -4,7 +4,7 @@ $base-font: 'Open Sans', "sans-serif";
 $header-font: 'Montserrat', "sans-serif";
 
 // FONT COLORS
-$base-color: black;
+$base-color: #333333;
 $header-color: #555555;
 
 // FONT SIZE
@@ -25,5 +25,7 @@ $yellow: #FDB631;
 $orange: #E67E22;
 $green: #32B796;
 
-// ICONS
-$icon-color: lighten(#000, 70%);;
+// OTHERS
+$icon-color: lighten(#000, 70%);
+$cta-color: rgba(234, 91, 12, 1.00);
+$link-color: rgba(81, 187, 254, 1);

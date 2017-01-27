@@ -11,7 +11,6 @@
 .main-image {
   width: 160px;
   border-radius: 50%;
-  // box-shadow: 1px 1px 2px 0 white;
   margin-top: 40px;
 }
 
@@ -36,7 +35,7 @@
 }
 
 .cta-email {
-  background: rgba(234, 91, 12, 1.00);
+  background: $cta-color;
   color: white;
   padding: 7px 18px;
   font-family: $base-font;
@@ -45,9 +44,9 @@
   font-size: 14px;
   transition: all 0.1s ease;
   border-radius: 2px;
-  margin: 20px 0;
+  margin: 0 0 20px 0;
   &:hover {
     background: white;
-    color: #EA5B0C;
+    color: $cta-color;
   }
 }

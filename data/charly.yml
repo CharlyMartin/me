@@ -7,6 +7,10 @@ email_subject: "Hi Charly!"
 meta_description: |
   Charly MARTIN's portfolio. Rails Developer, full-stack, UI Designer & SEO Expert.
   Have a cool project in mind? Drop me an email!
+meta_keywords: |
+  Rails Developer, Ruby on Rails, RoR, Fullstack developer, HTML5, CSS3, JavaScript,
+  Front-end design, UI/UX design, responsive design, web applications, responsive applications,
+  Charly MARTIN portfolio.
 language:
   name: "languages"
   list: "Ruby, HTML, CSS, JavaScript"
