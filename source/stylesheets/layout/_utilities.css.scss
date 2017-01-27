@@ -27,5 +27,11 @@
 
 // Perso
 a {text-decoration: none !important;}
-// h1, h2 {margin: 0 !important;}
+
 .no-padding {padding: 0 !important;}
+
+hr {
+    border: none;
+    height: 1px;
+    background: lighten(#000, 80%);
+}

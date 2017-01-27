@@ -19,6 +19,7 @@
 </div>
 
 <!-- HEADER -->
+
   <div class="container-fluid no-padding">
     <div class="row">
       <div class="col-xs-12">
@@ -44,16 +45,25 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+    <div class="<%= data.responsiveness.description %>">
       <div class="part" id="#about-me">
         <%= partial(:header, :locals => {:title => "ABOUT ME"}) %>
-        <p class="part-content"> <%= data.charly.bio %> </p>
+        <p class="part-content">
+          Hi there! I'm a french web developer building powerful and intuitive apps while traveling the &#x1F30D Perhaps we're near right now! I have been passionate about the web and its technologies for years and decided, in 2016, to leapfrog my skills by
+          attending
+          <a href="https://www.lewagon.com/" target="_blank">Le Wagon,</a>
+          the best code training course in Europe (possibly the universe).
+        </p>
+        <p class="part-content">
+          Enough about me. I'm glad you're here &#x1F603 I would love to hear about you. If you have a cool project in mind, I'm your guy.
+          Just <a href="mailto:<%= data.charly.email %>?subject=<%= data.charly.email_subject %>">drop me a line</a> and I'll be happy to discuss it with you. You may also want to check my <a href="#" id="slide-down-portfolio">project portfolio</a> below, to get an idea of what I can do. I'm looking forward to collaborating with you &#x26A1
+        </p>
       </div>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+    <div class="<%= data.responsiveness.description %>">
       <div class="part-content">
         <%= partial(:header, :locals => {:title => "SKILLS"}) %>
         <div class="list">
@@ -75,8 +85,13 @@
         <br>
 
         <div>
-          <p class="margin-top">If you're not familiar with the Rails framework, it's widespread on the web. Many web applications and interfaces run on it.</p>
-          <p>For example: <a href="https://www.airbnb.com" target="_blank">Airbnb</a>, <a href="https://www.kickstarter.com" target="_blank">Kickstarter</a>, <a href="https://basecamp.com" target="_blank">Basecamp</a> or <a href="https://dribbble.com" target="_blank">Dribbble</a> (and originally <a href="https://twitter.com/" target="_blank">Twitter</a>) are all using this web framework.</p>
+          <p>If you're not familiar with the Rails framework, it's widespread on the web and used by popular websites.</p>
+          <p>
+            For example: <a href="https://www.airbnb.com" target="_blank">Airbnb</a>,
+            <a href="https://www.kickstarter.com" target="_blank">Kickstarter</a>,
+            <a href="https://basecamp.com" target="_blank">Basecamp</a> or
+            <a href="https://soundcloud.com" target="_blank">SoundCloud</a> are all using this framework to run their web application and support millions of users.
+          </p>
         </div>
 
       </div>
@@ -86,7 +101,7 @@
 <!-- SOCIALS -->
 
   <div class="row">
-    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+    <div class="<%= data.responsiveness.description %>">
 
       <%= partial(:header, :locals => {:title => "SOCIAL"}) %>
       <div class="social-links">
@@ -111,6 +126,7 @@
   </div>
 
 </div>
+<span id="slide-down-end"></span>
 
 <!-- PORTFOLIO -->
 
@@ -170,21 +186,32 @@
 
 <!-- <div class="portfolio"> THANKS! </div> -->
 
-<!-- JAVASCRIPT -->
 <script>
+  // NAVBAR ////////////////////////////////////////////////////////////////////
   const nav = document.querySelector('.mynavbar');
 
   function toggleActive() {
-    const scrollPosition = window.scrollY;
-    const pixelTrigger = 500;
+    const windowYPosition = window.scrollY,
+      pixelTrigger = 500;
 
-    if (scrollPosition > pixelTrigger) {
+    if (windowYPosition > pixelTrigger) {
       nav.classList.add('navbar-active')
     }
-    else if (scrollPosition < pixelTrigger) {
+    else if (windowYPosition < pixelTrigger) {
       nav.classList.remove('navbar-active')
     };
   };
 
   window.addEventListener('scroll', toggleActive)
+
+  // SLIDE DOWN PORTFOLIO //////////////////////////////////////////////////////
+  $("#slide-down-portfolio").click(function(e) {
+    e.preventDefault();
+    $('html,body').animate(
+      {scrollTop: $("#slide-down-end").offset().top},
+      500
+    );
+  });
+
+  // END SCRIPT ////////////////////////////////////////////////////////////////
 </script>
