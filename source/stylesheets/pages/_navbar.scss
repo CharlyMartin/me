@@ -43,7 +43,13 @@
   transition: all 0.1s ease;
   border-radius: 2px;
   &:hover {
-    background: white;
-    color: $cta-color;
+    animation-name: blinking-cta;
+    animation-duration: 90ms;
+    // animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
   }
 }

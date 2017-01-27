@@ -46,6 +46,23 @@
   border-radius: 2px;
   margin: 0 0 20px 0;
   &:hover {
+    animation-name: blinking-cta;
+    animation-duration: 90ms;
+    // animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+}
+
+@keyframes blinking-cta {
+  0% {
+    background: $cta-color;
+    color: white;
+  }
+  100% {
     background: white;
     color: $cta-color;
   }
