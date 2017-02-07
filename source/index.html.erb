@@ -20,10 +20,10 @@
 
 <!-- HEADER -->
 
-  <div class="container-fluid no-padding">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="headline-container">
+<div class="container-fluid no-padding">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="headline-container">
 
         <%= image_tag data.charly.photo, class: 'main-image' %>
         <h1 class="name"> <%= data.charly.name %> </h1>
@@ -41,9 +41,11 @@
   </div>
 </div>
 
-<!-- SKILLS -->
+<!-- MAIN -->
 
 <div class="container">
+
+<!-- ABOUT ME -->
   <div class="row">
     <div class="<%= data.responsiveness.description %>">
       <div class="part" id="#about-me">
@@ -61,9 +63,11 @@
     </div>
   </div>
 
+<!-- SKILLS -->
   <div class="row">
     <div class="<%= data.responsiveness.description %>">
       <div class="part-content">
+
         <%= partial(:header, :locals => {:title => "SKILLS"}) %>
         <div class="list">
           <span class="key" id="first-key"> <%= data.charly.language.name %> </span>
@@ -98,12 +102,11 @@
   </div>
 
 <!-- SOCIALS -->
-
   <div class="row">
     <div class="<%= data.responsiveness.description %>">
 
       <%= partial(:header, :locals => {:title => "SOCIAL"}) %>
-      <div class="social-links">
+        <div class="social-links">
 
         <a id="linkedin" href="<%= data.charly.socials.linkedin.url %>" target="_blank">
           <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
@@ -123,46 +126,39 @@
 
   <span id="slide-down-end"></span>
 
+<!-- PROJECTS -->
   <div class="row">
     <div class="<%= data.responsiveness.description %>">
+
       <%= partial(:header, :locals => {:title => "PROJECTS"}) %>
-
       <!-- SITE 1 -->
-        <div class="wrapper-website" id="hubsy">
-
-          <%= image_tag 'hubsy.png', class: 'logo' %>
-          <h4 class="text-title">HUBSY CAFE & COWORKING</h4>
-          <p class="text-description">Main features: admin interface, responsive design, emails management, dual-language, geolocation, photo upload</p>
-          <p class="text-description">Main features: admin interface, responsive design, emails management, dual-language, geolocation, photo upload</p>
-
+        <div class="project-banner" id="hubsy">
+          <h4 class="project-title"> <%= data.projects.hubsy.name %> </h4>
+          <div class="not-displayed">
+            <%= image_tag data.projects.hubsy.logo, class: 'logo' %>
+            <p class="part-content"> <%= data.projects.hubsy.features %> </p>
+            <p class="part-content"> <%= data.projects.hubsy.stack %> </p>
+            <%= link_to 'See it live', data.projects.hubsy.url,
+            class: "project-link", target: "_blank" %>
+          </div>
         </div>
 
       <!-- SITE 2 -->
-      <a href="http://theneedle.herokuapp.com/" target="_blank" >
-        <div class="wrapper-website" id="dezimo">
-          <div class="container">
-            <div class="row">
-
-              <div class="col-md-2 col-sm-4 col-xs-12">
-                <div class="logo-container">
-                <%= image_tag 'marsot.png', class: 'logo' %>
-                </div>
-              </div>
-
-              <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="text-container">
-                  <h4 class="text-title">MARSOT</h4>
-                  <p class="text-description">Main features: user accounts, admin interface, Facebook connect, geolocation, sales funnel, time management, currency management, photo upload, messaging.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="project-banner" id="marsot">
+          <h4 class="project-title"> <%= data.projects.marsot.name %> </h4>
+          <%= image_tag data.projects.marsot.logo, class: 'logo not-displayed' %>
+          <p class="part-content"> <%= data.projects.marsot.features %> </p>
+          <p class="part-content"> <%= data.projects.marsot.stack %> </p>
+          <%= link_to 'See it live', data.projects.marsot.url,
+          class: "project-link", target: "_blank" %>
         </div>
-      </a>
 
     </div>
   </div>
+
 </div>
+
+<div class="footer"></div>
 
 
 <script>
@@ -191,6 +187,17 @@
       500
     );
   });
+
+  // PROJECTS //////////////////////////////////////////////////////////////////
+  const projects = document.querySelectorAll('.project-banner');
+  projects.forEach(project => project.addEventListener('click', display));
+
+  function display(e) {
+    // console.log(this)
+    const img = this.querySelector('img')
+    // console.log(div)
+    img.classList.toggle('displayed')
+  };
 
   // END SCRIPT ////////////////////////////////////////////////////////////////
 </script>
