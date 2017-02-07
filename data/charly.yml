@@ -20,8 +20,17 @@ framework:
 database:
   name: "database & ORM"
   list: "PostgreSQL, Active Record, SQL, SQLite"
-social:
-  linkedin: "https://www.linkedin.com/in/charlymartin"
-  github: "https://github.com/charlymartin"
-  twitter: "https://twitter.com/charlymrtn1"
-  instagram: "https://www.instagram.com/charly.mrtn/"
+socials:
+  linkedin:
+    id: "linkedin"
+    url: "https://www.linkedin.com/in/charlymartin"
+    fa: "fa fa-linkedin fa-2x"
+  github:
+    id: "github"
+    url: "https://github.com/charlymartin"
+    fa: "fa fa-github fa-2x"
+  instagram:
+    id: "instagram"
+    url: "https://www.instagram.com/charly.mrtn/"
+    fa: "fa fa-instagram fa-2x"
+

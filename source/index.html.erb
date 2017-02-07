@@ -104,19 +104,16 @@
 
       <%= partial(:header, :locals => {:title => "SOCIAL"}) %>
       <div class="social-links">
-        <a id="linkedin" href="<%= data.charly.social.linkedin %>" target="_blank">
+
+        <a id="linkedin" href="<%= data.charly.socials.linkedin.url %>" target="_blank">
           <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
         </a>
 
-        <a id="github" href="<%= data.charly.social.github %>" target="_blank">
+        <a id="github" href="<%= data.charly.socials.github.url %>" target="_blank">
           <i class="fa fa-github fa-2x" aria-hidden="true"></i>
         </a>
 
-        <a id="twitter" href="<%= data.charly.social.twitter %>" target="_blank">
-          <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
-        </a>
-
-        <a id="instagram" href="<%= data.charly.social.instagram %>" target="_blank">
+        <a id="instagram" href="<%= data.charly.socials.instagram.url %>" target="_blank">
           <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
         </a>
       </div>
@@ -124,66 +121,62 @@
     </div>
   </div>
 
-</div>
-<span id="slide-down-end"></span>
+  <span id="slide-down-end"></span>
 
-<!-- PORTFOLIO -->
+  <div class="row">
+    <div class="<%= data.responsiveness.description %>">
+      <%= partial(:header, :locals => {:title => "PROJECTS"}) %>
 
-<!-- <div class="portfolio">PROJECTS I'M PROUD OF</div> -->
+      <!-- SITE 1 -->
+      <a href="http://www.hubsy.fr/" target="_blank" >
+        <div class="wrapper-website" id="hubsy">
+          <div class="container">
+            <div class="row">
 
-<!-- SITE 1 -->
+              <div class="col-md-2 col-sm-4 col-xs-12">
+                <div class="logo-container">
+                <%= image_tag 'hubsy.png', class: 'logo' %>
+                </div>
+              </div>
 
-<%= partial(:header, :locals => {:title => "PROJECTS"}) %>
-
-<a href="http://www.hubsy.fr/" target="_blank" >
-  <div class="wrapper-website" id="hubsy">
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-2 col-md-offset-3 col-sm-4 col-sm-offset-1 col-xs-12">
-          <div class="logo-container">
-          <%= image_tag 'hubsy.png', class: 'logo' %>
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="text-container">
+                  <h4 class="text-title">HUBSY CAFE & COWORKING</h4>
+                  <p class="text-description">Main features: admin interface, responsive design, emails management, dual-language, geolocation, photo upload</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </a>
 
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <div class="text-container">
-            <h4 class="text-title">HUBSY CAFE & COWORKING</h4>
-            <p class="text-description">Main features: admin interface, responsive design, emails management, dual-language, geolocation, photo upload</p>
+      <!-- SITE 2 -->
+      <a href="http://theneedle.herokuapp.com/" target="_blank" >
+        <div class="wrapper-website" id="dezimo">
+          <div class="container">
+            <div class="row">
+
+              <div class="col-md-2 col-sm-4 col-xs-12">
+                <div class="logo-container">
+                <%= image_tag 'marsot.png', class: 'logo' %>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="text-container">
+                  <h4 class="text-title">MARSOT</h4>
+                  <p class="text-description">Main features: user accounts, admin interface, Facebook connect, geolocation, sales funnel, time management, currency management, photo upload, messaging.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </a>
+
     </div>
   </div>
-</a>
-
-<!-- SITE 2 -->
-
-<a href="http://theneedle.herokuapp.com/" target="_blank" >
-  <div class="wrapper-website" id="dezimo">
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-2 col-md-offset-3 col-sm-4 col-sm-offset-1 col-xs-12">
-          <div class="logo-container">
-          <%= image_tag 'marsot.png', class: 'logo' %>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <div class="text-container">
-            <h4 class="text-title">MARSOT</h4>
-            <p class="text-description">Main features: user accounts, admin interface, Facebook connect, geolocation, sales funnel, time management, currency management, photo upload, messaging.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</a>
-
 </div>
 
-<!-- <div class="portfolio"> THANKS! </div> -->
 
 <script>
   // NAVBAR ////////////////////////////////////////////////////////////////////
