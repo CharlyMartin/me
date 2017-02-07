@@ -1,5 +1,8 @@
 hubsy:
+  logo: ""
   name: "Hubsy Café $ Coworking"
-  features: "bla bla bla"
-  stack: ""
-  url: ""
+  features: |
+    admin interface, responsive design, emails management, dual-language,
+    geolocation, photo upload
+  stack: "Ruby on Rails, HTML, SCSS, Javascript, Bootstrap"
+  url: "http://www.hubsy.fr/"
