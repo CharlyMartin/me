@@ -134,7 +134,7 @@
       <!-- SITE 1 -->
         <div class="project-banner" id="hubsy">
           <h4 class="project-title"> <%= data.projects.hubsy.name %> </h4>
-          <div class="not-displayed">
+          <div class="project-content">
             <%= image_tag data.projects.hubsy.logo, class: 'logo' %>
             <p class="part-content"> <%= data.projects.hubsy.features %> </p>
             <p class="part-content"> <%= data.projects.hubsy.stack %> </p>
@@ -146,11 +146,13 @@
       <!-- SITE 2 -->
         <div class="project-banner" id="marsot">
           <h4 class="project-title"> <%= data.projects.marsot.name %> </h4>
-          <%= image_tag data.projects.marsot.logo, class: 'logo not-displayed' %>
-          <p class="part-content"> <%= data.projects.marsot.features %> </p>
-          <p class="part-content"> <%= data.projects.marsot.stack %> </p>
-          <%= link_to 'See it live', data.projects.marsot.url,
-          class: "project-link", target: "_blank" %>
+          <div class="project-content">
+            <%= image_tag data.projects.marsot.logo, class: 'logo' %>
+            <p class="part-content"> <%= data.projects.marsot.features %> </p>
+            <p class="part-content"> <%= data.projects.marsot.stack %> </p>
+            <%= link_to 'See it live', data.projects.marsot.url,
+            class: "project-link", target: "_blank" %>
+          </div>
         </div>
 
     </div>
@@ -190,13 +192,12 @@
 
   // PROJECTS //////////////////////////////////////////////////////////////////
   const projects = document.querySelectorAll('.project-banner');
+
   projects.forEach(project => project.addEventListener('click', display));
 
-  function display(e) {
-    // console.log(this)
-    const img = this.querySelector('img')
-    // console.log(div)
-    img.classList.toggle('displayed')
+  function display() {
+    const content = this.querySelector('.project-content');
+    $(content).slideToggle(500);
   };
 
   // END SCRIPT ////////////////////////////////////////////////////////////////
