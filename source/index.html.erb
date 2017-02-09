@@ -53,7 +53,7 @@
         <p class="part-content">
           Hi there! I'm a french web developer building powerful and intuitive apps while traveling the &#x1F30D Perhaps we're near right now! I have been passionate about the web and its technologies for years and decided, in 2016, to skyrocket my skills by attending
           <a href="https://www.lewagon.com/" target="_blank">Le Wagon,</a>
-          the best code training course in Europe &#x1F499
+          the best coding bootcamp in Europe &#x1F499
         </p>
         <p class="part-content">
           Enough about me. I'm glad you're here &#x1F603 I would love to hear from you. If you have a cool project in mind, I'm your guy.
@@ -132,25 +132,41 @@
 
       <%= partial(:header, :locals => {:title => "PROJECTS"}) %>
       <!-- SITE 1 -->
-        <div class="project-banner" id="hubsy">
+        <div class="project-banner hubsy" data-name="hubsy">
           <h4 class="project-title"> <%= data.projects.hubsy.name %> </h4>
           <div class="project-content">
             <%= image_tag data.projects.hubsy.logo, class: 'logo' %>
-            <p class="part-content"> <%= data.projects.hubsy.features %> </p>
-            <p class="part-content"> <%= data.projects.hubsy.stack %> </p>
-            <%= link_to 'See it live', data.projects.hubsy.url,
+
+            <div class="text-container">
+              <span class="project-key">FEATURES</span>
+              <p class="project-attributes"> <%= data.projects.hubsy.features %> </p>
+            </div>
+            <div class="text-container">
+              <span class="project-key">STACK</span>
+              <p class="project-attributes"> <%= data.projects.hubsy.stack %> </p>
+            </div>
+
+            <%= link_to 'SEE IT LIVE', data.projects.hubsy.url,
             class: "project-link", target: "_blank" %>
           </div>
         </div>
 
       <!-- SITE 2 -->
-        <div class="project-banner" id="marsot">
+        <div class="project-banner marsot" data-name="marsot">
           <h4 class="project-title"> <%= data.projects.marsot.name %> </h4>
           <div class="project-content">
             <%= image_tag data.projects.marsot.logo, class: 'logo' %>
-            <p class="part-content"> <%= data.projects.marsot.features %> </p>
-            <p class="part-content"> <%= data.projects.marsot.stack %> </p>
-            <%= link_to 'See it live', data.projects.marsot.url,
+
+            <div class="text-container">
+              <span class="project-key">FEATURES</span>
+              <p class="project-attributes"> <%= data.projects.marsot.features %> </p>
+            </div>
+            <div class="text-container">
+              <span class="project-key">STACK</span>
+              <p class="project-attributes"> <%= data.projects.marsot.stack %> </p>
+            </div>
+
+            <%= link_to 'SEE IT LIVE', data.projects.marsot.url,
             class: "project-link", target: "_blank" %>
           </div>
         </div>
@@ -193,11 +209,29 @@
   // PROJECTS //////////////////////////////////////////////////////////////////
   const projects = document.querySelectorAll('.project-banner');
 
-  projects.forEach(project => project.addEventListener('click', display));
+  projects.forEach(project => project.addEventListener('click', slideToggle));
 
-  function display() {
-    const content = this.querySelector('.project-content');
-    $(content).slideToggle(500);
+  function slideToggle() {
+    const projectContent = this.querySelector('.project-content');
+    $(projectContent).slideToggle();
+
+    const id = this.getAttribute("id")
+    const projectName = this.dataset.name; // Name of the project as string
+
+    if (id === null) {
+      addID(this, projectName);
+    }
+    else {
+      removeID(this);
+    };
+  };
+
+  function addID(element, value) {
+    element.setAttribute("id", `${value}-clicked`)
+  };
+
+  function removeID(element) {
+    element.removeAttribute("id");
   };
 
   // END SCRIPT ////////////////////////////////////////////////////////////////

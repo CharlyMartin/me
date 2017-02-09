@@ -1,9 +1,13 @@
 .project-banner {
   padding: 10px 30px;
-  border-top: solid 2px white;
+  margin-top: 3px;
   border-radius: 4px;
   text-align: center;
   cursor: pointer;
+  transition: all 0.1s ease;
+  &:hover {
+    opacity: 0.9;
+  }
 }
 
 .project-title {
@@ -20,52 +24,72 @@
 
 .logo {
   width: 150px;
-  margin: 10px 0;
+  margin: 20px;
 }
 
-.text-containter {
+.text-container{
   width: 100%;
-  padding: 10px;
+  text-align: left;
 }
 
-.text-description {
-  font-family: $base-font;
-  color: black;
-  font-size: 15px;
+.project-key {
+  font-family: $header-font;
+  font-size: 13px;
 }
 
-#hubsy {
-  background: RGBA(221, 186, 128, 0.5);
-  transition: all 0.2s ease;
-  &:hover {
-    background: RGBA(221, 186, 128, 0.4);
-  }
-}
-
-#marsot {
-  background: RGBA(10, 10, 10, 0.05);
-  transition: all 0.2s ease;
-  &:hover {
-    background: RGBA(10, 10, 10, 0.1);
-  }
+.project-attributes {
 }
 
 .footer {
-  height: 5vh;
-  width: 100%;
+  height: 50px;
 }
 
-// JS //////////////////////////////////////////////////////////////////////////
+// PROJECTS SPECIFIC (JS)  /////////////////////////////////////////////////////
 
-.not-displayed {
-  display: none;
+// HUBSY
+.hubsy {
+  background: $hubsy;
+  .project-content span.project-key {
+    color: $hubsy;
+  }
+  .project-content a {
+    background: $hubsy;
+    color: white;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-family: $header-font;
+    font-size: 13px;
+  }
 }
 
-.displayed {
-  display: inline-block;
-  transition: display 1000ms ease;
+#hubsy-clicked {
+  background: white;
+  border: 3px solid $hubsy;
+  .project-title {
+    color: $hubsy;
+  }
 }
 
-.offscreen {
-  transform: translateY(-100vw)
+// MARSOT
+.marsot {
+  background: $marsot;
+  .project-content span.project-key {
+    color: $marsot;
+  }
+  .project-content a {
+    background: $marsot;
+    color: white;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-family: $header-font;
+    font-size: 13px;
+  }
+}
+
+#marsot-clicked {
+  background: white;
+  border: 3px solid $marsot;
+  .project-title {
+    color: $marsot;
+  }
 }
