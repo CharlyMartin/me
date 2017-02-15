@@ -4,7 +4,7 @@ hubsy:
   features: |
     admin interface, responsive design, emails management, dual-language,
     geolocation, photo upload
-  stack: "Ruby on Rails, HTML, SCSS, Javascript"
+  stack: "Ruby on Rails, HTML, SCSS, Javascript, Heroku"
   url: "http://www.hubsy.fr/"
 marsot:
   name: "MARSOT"
@@ -12,5 +12,5 @@ marsot:
   features: |
     user accounts, admin interface, Facebook connect, geolocation,
     sales funnel, time management, currency management, photo upload, messaging
-  stack: "Ruby on Rails, HTML, SCSS, Javascript"
+  stack: "Ruby on Rails, HTML, SCSS, Javascript, Heroku"
   url: "http://theneedle.herokuapp.com/"
